@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=[];
+        let n=+prompt("Nhap vao so phan tu cua mang");
+        for(let i=0;i<n;i++){
+            a[i]=+prompt("Nhap vao phan tu " +i+ " cua mang");
+        }           
+        let targetNumber = +prompt("Nhập vào số");
+        let currentSum = a[0];
+        let start = 0;
+        let b = [];
+        for (let i = 1; i <= a.length; i++) {
+            while (currentSum > targetNumber && start < i - 1) {
+                currentSum -= a[start];
+                start++;
+            }
+            //slice trích xuất mảng con
+            if (currentSum === targetNumber) {
+                    b = a.slice(start, i);
+                    break;
+            }
+            if (i < a.length) {
+                currentSum += a[i];
+            }
+        }
+        if (b.length > 0) {
+            console.log("Mảng con thỏa mãn:", b);
+        } else {
+            console.log("Không có mảng con thỏa mãn");
+        }
+    </script>
+</body>
+</html>

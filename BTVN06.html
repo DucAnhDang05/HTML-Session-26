@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = +prompt("Nhap vao so phan tu cua ham");
+        let am =[];
+        let duong = [];
+        let num=[];
+        for(let i=0;i<n;i++){
+            num[i]= +prompt("Nhap vao phan tu " +i+" cua mang");
+        }
+        for(let i=0;i<n;i++){
+            if(num[i]<0){
+                am.push(num[i]);
+            }else{
+                duong.push(num[i]);
+            }
+        }
+        num= am.concat(duong);
+        for(let i=0; i<n; i++){
+            console.log(num[i]);
+        } 
+    </script>
+</body>
+</html>

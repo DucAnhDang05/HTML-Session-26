@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = +prompt("Nhap vao so phan tu cua mang");
+        let a= [];
+        let b= [];
+        for(let i=0;i<n;i++){
+            a[i]= +prompt("Nhap vao phan tu " + i +" cua a");
+        }
+        for(let i=n-1;i>=0;i--){
+                b.push(a[i]);
+        }
+        console.log("Mang sau khi dao nguoc");
+        for(let i=0;i<n;i++){
+            console.log(b[i]);
+        }
+    </script>
+</body>
+</html>

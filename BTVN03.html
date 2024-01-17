@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = +prompt("Nhap so phan tu cua mang");
+        let a = [];
+        for(let i=0;i<n;i++){
+            a[i] = +prompt("Nhap vao phan tu cua mang");
+        }
+        let search = +prompt("Nhap vao so muon tim kiem");
+        let count = 0;
+        for(i=0;i<n;i++){
+            if(search===a[i]){
+                count++;
+            }
+        }
+        console.log("Phan tu " + search + " xuat hien " + count + " lan");
+    </script>
+</body>
+</html>
